@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" href="favicon.png" type="image/png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 причин, почему Ями плохая</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, black, red);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .facts {
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: darkred;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: yellow;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="sonya.jpg" alt="Фото Ями" class="profile-img">
+    <h1>5 причин, почему Ями плохая</h1>
+    <div class="facts">
+        <ul id="factList">
+            <li>Факт 1: Она дура</li>
+            <li>Факт 2: Назвала меня какахай</li>
+            <li>Факт 3: Чурка</li>
+            <li>Факт 4: Ладно</li>
+            <li>Факт 5: Извини</li>
+        </ul>
+        <button onclick="showRandomMessage()">Ещё причины</button>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        const messages = [
+            "Она украла все конфеты!",
+            "Скрывает, что любит Эйса больше Артёма.",
+            "Однажды сказала 'ладно' вместо 'ок'.",
+            "Слишком хороша в химии. СЛИШКОМ.",
+            "Её улыбка подозрительно милая.",
+            "Украла последний кусок пиццы.",
+            "Забыла полить кактус — он обиделся.",
+            "Никогда не делится чаем.",
+            "В её кружке всегда больше кофе, чем у всех.",
+            "Говорит ещё 'пять минут', а проходит час.",
+            "Слишком хороша в настольных играх.",
+            "Всегда ест самое вкусное мороженое.",
+            "Ходит по дому в носках разного цвета.",
+            "Громко хихикает в библиотеке.",
+            "Делает слишком милые фотографии, чтобы быть настоящей.",
+            "Может сказать 'ладно' тоном, который пугает.",
+            "Придумывает лучшие шутки, и все завидуют.",
+            "Забыла поздороваться с соседом.",
+            "Называет свою любимую подушку Эйс, и ебётся с ним.",
+            "Её кот подчиняется только ей.",
+            "Смеётся над мемами, которые никто не понимает.",
+            "Она просто слишком крута, и все"
+        ];
+
+        function showRandomMessage() {
+            const messageElement = document.getElementById('message');
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            messageElement.textContent = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
